@@ -3,22 +3,46 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#f7f1e6">
+  <meta name="theme-color" content="#4a1022">
   <meta name="robots" content="noindex">
-  <title>60th Birthday Dinner at The Pad: Food Order</title>
+  <title>Carol’s 60th Birthday Menu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,600&display=swap">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <a class="skip" href="#order">Skip to the Order Form</a>
 
   <header class="hero">
-    <p class="eyebrow">60th Birthday Dinner</p>
-    <h1>Choose Your Meal at <span translate="no">The&nbsp;Pad</span></h1>
-    <p class="lede">The restaurant needs everyone’s food order before the night. Pick a main course plus a starter, a dessert or both, then send your order.</p>
-    <dl class="prices">
-      <div><dt>2 courses</dt><dd id="price-2"></dd></div>
-      <div><dt>3 courses</dt><dd id="price-3"></dd></div>
-    </dl>
+    <div class="hero-inner">
+      <svg class="balloons left" viewBox="0 0 150 250" width="150" height="250" aria-hidden="true" focusable="false">
+        <g fill="none" stroke="#f4d58d" stroke-width="1.2" opacity=".7">
+          <path d="M44 96q-8 50 22 150"/><path d="M96 78q10 70 -24 168"/><path d="M118 132q0 50 -42 114"/>
+        </g>
+        <ellipse cx="44" cy="54" rx="32" ry="40" fill="#e9c46a"/><path d="M39 93l5 9 5-9z" fill="#e9c46a"/>
+        <ellipse cx="96" cy="40" rx="30" ry="37" fill="#f7b7a3"/><path d="M91 76l5 9 5-9z" fill="#f7b7a3"/>
+        <ellipse cx="118" cy="98" rx="26" ry="33" fill="#d98a9a"/><path d="M113 130l5 9 5-9z" fill="#d98a9a"/>
+        <g fill="#fff" opacity=".35"><ellipse cx="33" cy="38" rx="7" ry="12" transform="rotate(-20 33 38)"/><ellipse cx="86" cy="25" rx="6" ry="11" transform="rotate(-20 86 25)"/><ellipse cx="110" cy="85" rx="5" ry="10" transform="rotate(-20 110 85)"/></g>
+      </svg>
+      <svg class="balloons right" viewBox="0 0 150 250" width="150" height="250" aria-hidden="true" focusable="false">
+        <g fill="none" stroke="#f4d58d" stroke-width="1.2" opacity=".7">
+          <path d="M44 96q-8 50 22 150"/><path d="M96 78q10 70 -24 168"/><path d="M118 132q0 50 -42 114"/>
+        </g>
+        <ellipse cx="44" cy="54" rx="32" ry="40" fill="#e9c46a"/><path d="M39 93l5 9 5-9z" fill="#e9c46a"/>
+        <ellipse cx="96" cy="40" rx="30" ry="37" fill="#f7b7a3"/><path d="M91 76l5 9 5-9z" fill="#f7b7a3"/>
+        <ellipse cx="118" cy="98" rx="26" ry="33" fill="#d98a9a"/><path d="M113 130l5 9 5-9z" fill="#d98a9a"/>
+        <g fill="#fff" opacity=".35"><ellipse cx="33" cy="38" rx="7" ry="12" transform="rotate(-20 33 38)"/><ellipse cx="86" cy="25" rx="6" ry="11" transform="rotate(-20 86 25)"/><ellipse cx="110" cy="85" rx="5" ry="10" transform="rotate(-20 110 85)"/></g>
+      </svg>
+      <p class="eyebrow">Dinner at <span translate="no">The&nbsp;Pad</span></p>
+      <p class="sixty" aria-hidden="true">60</p>
+      <h1>Carol’s 60th Birthday Menu</h1>
+      <p class="lede">The restaurant needs everyone’s food order before the night. Pick a main course plus a starter, a dessert or both, then send your order.</p>
+      <dl class="prices">
+        <div><dt>2 courses</dt><dd id="price-2"></dd></div>
+        <div><dt>3 courses</dt><dd id="price-3"></dd></div>
+      </dl>
+    </div>
   </header>
 
   <main id="order">
@@ -54,6 +78,7 @@
     </form>
 
     <section id="done" class="card done" tabindex="-1" hidden>
+      <p class="done-mark" aria-hidden="true">🎉</p>
       <h2>Order Sent</h2>
       <p id="done-intro"></p>
       <dl id="done-summary" class="summary"></dl>

@@ -1,8 +1,8 @@
-# The Pad: 60th birthday food orders
+# Carol's 60th birthday menu
 
 A one-page site where each guest picks a starter, main course and dessert from The Pad's Early Evening Menu, sees what their meal costs (2 courses £22.95, 3 courses £25.95), and sends the order. Each order becomes a row in a Google Sheet. To set it up, connect the site to the sheet, then publish it on GitHub Pages.
 
-- Site: `index.html`, `styles.css`, `app.js`, `config.js`
+- Site: `index.html`, `styles.css`, `app.js`, `config.js`, `confetti.svg`
 - Sheet: [The Pad – 60th Birthday Food Orders](https://docs.google.com/spreadsheets/d/1QuBaW-t_nJAvMvjpURMTGV398dBgD_oD7e9ogk9o1cs/edit)
 - Sheet script: `apps-script/Code.gs`
 

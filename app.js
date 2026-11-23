@@ -152,6 +152,25 @@ async function send(order) {
   return result;
 }
 
+// A short confetti fall when an order goes through. Skipped for people who ask for less motion.
+function celebrate() {
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  const colours = ["#e9c46a", "#f7b7a3", "#d98a9a", "#7a1f2b", "#f4d58d"];
+  const layer = el("div", { class: "confetti", "aria-hidden": "true" });
+  for (let i = 0; i < 70; i++) {
+    const piece = el("i");
+    piece.style.left = `${Math.random() * 100}%`;
+    piece.style.background = colours[i % colours.length];
+    piece.style.animationDuration = `${2 + Math.random() * 2}s`;
+    piece.style.animationDelay = `${Math.random() * 0.6}s`;
+    piece.style.setProperty("--drift", `${Math.random() * 120 - 60}px`);
+    piece.style.setProperty("--spin", `${Math.random() * 720 - 360}deg`);
+    layer.append(piece);
+  }
+  document.body.append(layer);
+  setTimeout(() => layer.remove(), 5000);
+}
+
 function showDone(order) {
   $("done-intro").textContent = `Thanks, ${order.name}. The organiser has your order:`;
   const rows = [
@@ -166,6 +185,7 @@ function showDone(order) {
   );
   form.hidden = true;
   $("done").hidden = false;
+  celebrate();
   $("done").focus();
   $("done").scrollIntoView({ block: "start" });
 }
