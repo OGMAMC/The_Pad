@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f7f1e6">
+  <meta name="robots" content="noindex">
+  <title>60th Birthday Dinner at The Pad: Food Order</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#order">Skip to the Order Form</a>
+
+  <header class="hero">
+    <p class="eyebrow">60th Birthday Dinner</p>
+    <h1>Choose Your Meal at <span translate="no">The&nbsp;Pad</span></h1>
+    <p class="lede">The restaurant needs everyone’s food order before the night. Pick a main course plus a starter, a dessert or both, then send your order.</p>
+    <dl class="prices">
+      <div><dt>2 courses</dt><dd id="price-2"></dd></div>
+      <div><dt>3 courses</dt><dd id="price-3"></dd></div>
+    </dl>
+  </header>
+
+  <main id="order">
+    <p id="closed" class="notice" hidden>Ordering isn’t open yet. You can look through the menu, but you can’t send an order until the organiser switches it on.</p>
+
+    <form id="form" novalidate autocomplete="off">
+      <section class="card">
+        <label class="field-label" for="name">Your Name</label>
+        <p class="hint" id="name-hint">One order per person. Use the name the organiser knows you by.</p>
+        <input id="name" name="name" type="text" maxlength="80" required
+               autocomplete="name" aria-describedby="name-hint name-error">
+        <p class="error" id="name-error" hidden></p>
+      </section>
+
+      <div id="courses"></div>
+
+      <section class="card">
+        <label class="field-label" for="notes">Allergies or Dietary Needs <span class="optional">(optional)</span></label>
+        <p class="hint" id="notes-hint">The organiser passes these on to the restaurant with the order.</p>
+        <textarea id="notes" name="notes" rows="3" maxlength="500" aria-describedby="notes-hint"></textarea>
+      </section>
+
+      <div class="bar">
+        <div class="bar-inner">
+          <p class="total" aria-live="polite">
+            <span id="total-label">Pick a main course</span>
+            <strong id="total-price"></strong>
+          </p>
+          <button type="submit" id="submit">Send My Order</button>
+        </div>
+        <p class="error bar-error" id="form-error" role="alert" hidden></p>
+      </div>
+    </form>
+
+    <section id="done" class="card done" tabindex="-1" hidden>
+      <h2>Order Sent</h2>
+      <p id="done-intro"></p>
+      <dl id="done-summary" class="summary"></dl>
+      <p class="hint">To change your order, send a new one under the same name and tell the organiser which one to keep.</p>
+      <button type="button" id="another">Order for Another Person</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>Please tell your server about any allergies or food intolerances on the night as well.</p>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
